@@ -5,33 +5,33 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "faker"
-
-20.times do
-  users = User.new(
-    email: Faker::Internet.email,
-    username: Faker::Games::Pokemon.name,
-    private: Faker::Boolean.boolean
-  )
-  users.save
-end
+# require "faker"
 
 # 20.times do
-#   user = User.order("RAND()").first(
-#     user.photo.create(caption: Faker::Movies::HarryPotter.quote,
-#     image: Faker::LoremFlickr.image)
+#   users = User.new(
+#     email: Faker::Internet.email,
+#     username: Faker::Games::Pokemon.name,
+#     private: Faker::Boolean.boolean
 #   )
+#   users.save
 # end
 
-20.times do
-  user = User.all.sample
-  userid = user.object_id
-  photos = Photo.new(
-    image: Faker::LoremFlickr.image,
-    caption: Faker::Movies::HarryPotter.quote,
-    owner_id: userid
-  )
-end
+# # 20.times do
+# #   user = User.order("RAND()").first(
+# #     user.photo.create(caption: Faker::Movies::HarryPotter.quote,
+# #     image: Faker::LoremFlickr.image)
+# #   )
+# # end
+
+# 20.times do
+#   user = User.all.sample
+#   userid = user.object_id
+#   photos = Photo.new(
+#     image: Faker::LoremFlickr.image,
+#     caption: Faker::Movies::HarryPotter.quote,
+#     owner_id: userid
+#   )
+# end
 
 # 20.times do
 #   likes = Like.new(
